@@ -8,7 +8,9 @@ function App() {
       <header className="App-header">
         <h1>HQ Collection</h1>
       </header>
+        <div className='content'>
         <HQContainer comicsList={comicsList} />
+        </div>
     </div>
   );
 }
