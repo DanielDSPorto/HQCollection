@@ -31,3 +31,19 @@
 img.header-image {
   opacity: 0.5;
 }
+
+.button-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.button-style {
+  margin-right: 1em;
+  /* margin-bottom: 1em; */
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 0.5em;
+  background-color: #161a1d;
+  color: #fff
+}
