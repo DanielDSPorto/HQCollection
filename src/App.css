@@ -28,6 +28,21 @@
   padding-top: 8em;
 }
 
+@media (min-width: 540px)
+{
+  .content {
+  padding-top: 10em;
+}
+}
+
+@media (min-width: 800px)
+{
+  .content {
+  padding-top: 12em;
+}
+}
+
+
 img.header-image {
   opacity: 0.5;
 }
