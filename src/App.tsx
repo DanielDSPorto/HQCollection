@@ -12,21 +12,27 @@ type FilterType = {
   read :  boolean;
 }
 
+const filtersDisabledObject: FilterType = {
+  toBuy : false,
+  unread : false,
+  read :  false,
+}
+
 const filteredComicList = (comicList: ComicType[], filters : FilterType) => {
   return comicList.filter(x => (!filters.toBuy || x.status === ComicStatusEnum['A ser comprado']) && (!filters.unread || x.status === ComicStatusEnum['Não Lido']) && (!filters.read || x.status === ComicStatusEnum.Lido))
 }
 
 function App() {
-  const [filters, setFilters] = React.useState<FilterType>({toBuy: false, unread: false, read: false})
+  const [filters, setFilters] = React.useState<FilterType>(filtersDisabledObject)
 
   return (
     <div className="App">
       <header className="App-header">
         <h1>HQ Collection</h1>
         <div className='button-box'>
-          <button className="button-style" onClick={()=>setFilters({...filters, toBuy: !filters.toBuy})}>A ser comprado</button>
-          <button className="button-style" onClick={()=>setFilters({...filters, unread: !filters.unread})}>Não Lido</button>
-          <button className="button-style" onClick={()=>setFilters({...filters, read: !filters.read})}>Lido</button>
+          <button className="button-style" onClick={()=>setFilters({...filtersDisabledObject, toBuy: !filters.toBuy})}>A ser comprado</button>
+          <button className="button-style" onClick={()=>setFilters({...filtersDisabledObject, unread: !filters.unread})}>Não Lido</button>
+          <button className="button-style" onClick={()=>setFilters({...filtersDisabledObject, read: !filters.read})}>Lido</button>
         </div>
       </header>
         <div className='content'>
