@@ -31,15 +31,22 @@
 @media (min-width: 540px)
 {
   .content {
-  padding-top: 10em;
+    padding-top: 10em;
+  }
 }
+
+@media (min-width: 670px)
+{
+  .content {
+    padding-top: 11em;
+  }
 }
 
 @media (min-width: 800px)
 {
   .content {
-  padding-top: 12em;
-}
+    padding-top: 12em;
+  }
 }
 
 
@@ -61,4 +68,9 @@ img.header-image {
   padding: 0.5em;
   background-color: #161a1d;
   color: #fff
+}
+
+.pie-chart-container {
+  width: 400px;
+  height: 400px;
 }
