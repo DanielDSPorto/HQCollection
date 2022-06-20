@@ -36,7 +36,7 @@ const StatisticsContainer = () => {
     ];
 
     return <div className="pie-chart-container">
-    <ResponsiveContainer width={730} height="90%">
+    <ResponsiveContainer width="90%" height="90%">
         <PieChart  width={730} height={450}>
             <Tooltip formatter={renderColorfulLegendText}/>
             <Legend verticalAlign="top" height={0} />
