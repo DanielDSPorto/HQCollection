@@ -41,7 +41,7 @@ const StatisticsContainer = () => {
             <Tooltip formatter={renderColorfulLegendText}/>
             <Legend verticalAlign="top" height={0} />
             <Pie data={dataArray} dataKey="percentage" nameKey="status" cx="50%" cy="50%" outerRadius={50} > 
-        	{dataArray.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)} 
+        	{dataArray.map((entry, index) => <Cell  key={index} fill={COLORS[index % COLORS.length]}/>)} 
             </Pie>
         </PieChart>
         </ResponsiveContainer>
