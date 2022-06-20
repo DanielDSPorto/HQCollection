@@ -1,6 +1,5 @@
 import './App.css';
 import HQContainer from './components/HQContainer';
-import comicsList from './components/comicsList';
 import React from 'react';
 import comicList from './components/comicsList';
 import { ComicStatusEnum } from './model/ComicStatusEnum';
