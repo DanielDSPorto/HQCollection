@@ -202,4 +202,20 @@ const comicList: ComicType[] = [
     { label: "Flash: Velocidade Terminal", collectionNumber: 94, status: 1 },
 ];
 
+export const SagasList: ComicType[] = [
+    { label: "Crise nas Infinitas Terras", collectionNumber: 1, status: 0 },
+    { label: "Crise Infinita", collectionNumber: 2, status: 1 },
+    { label: "Crise Final", collectionNumber: 3, status: 1 },
+    { label: "Crise de Identidade", collectionNumber: 4, status: 0 },
+    { label: "Universo DC: Legados", collectionNumber: 5, status: 1 },
+    { label: "Um Milhão: Parte 1", collectionNumber: 6, status: 1 },
+    { label: "Um Milhão: Parte 2", collectionNumber: 7, status: 1 },
+    { label: "SJA: Reino do Amanhã, Parte 1", collectionNumber: 8, status: 1 },
+    { label: "SJA: Reino do Amanhã, Parte 2", collectionNumber: 9, status: 1 },
+    { label: "Solo: Parte 1", collectionNumber: 10, status: 1 },
+    { label: "Solo: Parte 2", collectionNumber: 11, status: 1 },
+    { label: "Xeque-Mate: Parte 1", collectionNumber: 12, status: 0 },
+    { label: "Xeque-Mate: Parte 2", collectionNumber: 13, status: 0 },
+];
+
 export default comicList;

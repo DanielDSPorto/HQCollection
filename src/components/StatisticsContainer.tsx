@@ -1,51 +1,54 @@
-import { Cell, Legend, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
 import { ComicStatusEnum } from "../model/ComicStatusEnum";
-import comicList from "./comicsList";
+import ComicType from "../model/ComicType";
+import comicList, { SagasList } from "./comicsList";
+import ConsumptionPieChart from "./graphics/ConsumptionPieChart";
 
-type reducedComicsType = {
+export type reducedComicsType = {
     percentage: number;
-    status : string;
-};
-
-
-const COLORS = [
-    "#fb8500",
-    "#ffb703",
-    "#219ebc"
-];
-
-const renderColorfulLegendText = (value: string, entry: any) => {
-  const { color } = entry;
-
-  return <span style={{ color }}>{`${(parseFloat(value)*100).toFixed(2)}%`}</span>;
+    status: string;
 };
 
 const StatisticsContainer = () => {
+    const generateDataArray = (originalList: ComicType[]) => {
+        return [
+            {
+                percentage:
+                    originalList.filter(
+                        (x) => x.status === ComicStatusEnum["A ser comprado"]
+                    ).length / originalList.length,
+                status: ComicStatusEnum[0],
+            },
+            {
+                percentage:
+                    originalList.filter(
+                        (x) => x.status === ComicStatusEnum["Não Lido"]
+                    ).length / originalList.length,
+                status: ComicStatusEnum[1],
+            },
+            {
+                percentage:
+                    originalList.filter(
+                        (x) => x.status === ComicStatusEnum.Lido
+                    ).length / originalList.length,
+                status: ComicStatusEnum[2],
+            },
+        ];
+    };
 
-    const dataArray: reducedComicsType[] = 
-    [
-        {percentage: (comicList.filter
-            (x => x.status === ComicStatusEnum["A ser comprado"]).length/comicList.length), 
-        status: ComicStatusEnum[0]},
-        {percentage: (comicList.filter
-            (x => x.status === ComicStatusEnum["Não Lido"]).length/comicList.length), 
-        status: ComicStatusEnum[1]},
-        {percentage: (comicList.filter
-            (x => x.status === ComicStatusEnum.Lido).length/comicList.length), 
-        status: ComicStatusEnum[2]},
-    ];
-
-    return <div className="pie-chart-container">
-    <ResponsiveContainer width="90%" height="90%">
-        <PieChart  width={730} height={450}>
-            <Tooltip formatter={renderColorfulLegendText}/>
-            <Legend verticalAlign="top" height={0} />
-            <Pie data={dataArray} dataKey="percentage" nameKey="status" cx="50%" cy="50%" outerRadius={50} > 
-        	{dataArray.map((entry, index) => <Cell  key={index} fill={COLORS[index % COLORS.length]}/>)} 
-            </Pie>
-        </PieChart>
-        </ResponsiveContainer>
-    </div>
+    return (
+        <div className="graphs-wrapper">
+            <ConsumptionPieChart
+                dataArray={generateDataArray(comicList)}
+                title="Graphic Novels"
+            />
+            ;
+            <ConsumptionPieChart
+                dataArray={generateDataArray(SagasList)}
+                title="Sagas Definitivas"
+            />
+            ;
+        </div>
+    );
 };
 
 export default StatisticsContainer;
