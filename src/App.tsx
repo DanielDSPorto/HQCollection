@@ -48,7 +48,7 @@ function App() {
                             setFilters({
                                 ...filtersDisabledObject,
                                 toBuy: !filters.toBuy,
-                            }),
+                            });
                                 setGraphsTabEnabled(false);
                         }}>
                         A ser comprado
@@ -59,7 +59,7 @@ function App() {
                             setFilters({
                                 ...filtersDisabledObject,
                                 unread: !filters.unread,
-                            }),
+                            });
                                 setGraphsTabEnabled(false);
                         }}>
                         Não Lido
@@ -70,7 +70,7 @@ function App() {
                             setFilters({
                                 ...filtersDisabledObject,
                                 read: !filters.read,
-                            }),
+                            });
                                 setGraphsTabEnabled(false);
                         }}>
                         Lido
@@ -78,7 +78,7 @@ function App() {
                     <button
                         className="button-style"
                         onClick={() => {
-                            setSagasListEnabled(!sagasListEnabled),
+                            setSagasListEnabled(!sagasListEnabled);
                                 setGraphsTabEnabled(false);
                         }}>{`Lista : ${
                         !sagasListEnabled
