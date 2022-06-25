@@ -81,6 +81,7 @@ img.header-image {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin-top: 0.5em;
 }
 
 @media (max-width: 540px) {
