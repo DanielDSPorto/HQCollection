@@ -71,8 +71,8 @@ function App() {
                             setFilters({
                                 ...filtersDisabledObject,
                                 toBuy: !filters.toBuy,
-                            }),
-                                setGraphsTabEnabled(false);
+                            });
+                            setGraphsTabEnabled(false);
                         }}>
                         A ser comprado
                     </button>
@@ -82,8 +82,8 @@ function App() {
                             setFilters({
                                 ...filtersDisabledObject,
                                 unread: !filters.unread,
-                            }),
-                                setGraphsTabEnabled(false);
+                            });
+                            setGraphsTabEnabled(false);
                         }}>
                         Não Lido
                     </button>
@@ -93,8 +93,8 @@ function App() {
                             setFilters({
                                 ...filtersDisabledObject,
                                 read: !filters.read,
-                            }),
-                                setGraphsTabEnabled(false);
+                            });
+                            setGraphsTabEnabled(false);
                         }}>
                         Lido
                     </button>

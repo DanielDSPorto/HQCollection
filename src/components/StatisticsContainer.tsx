@@ -35,12 +35,10 @@ const StatisticsContainer = () => {
                 dataArray={generateDataArray(comicList)}
                 title="Graphic Novels"
             />
-            ;
             <ConsumptionPieChart
                 dataArray={generateDataArray(SagasList)}
                 title="Sagas Definitivas"
             />
-            ;
         </div>
     );
 };
