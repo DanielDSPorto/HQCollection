@@ -3,35 +3,29 @@ import ComicType from "../model/ComicType";
 import comicList, { SagasList } from "./comicsList";
 import ConsumptionPieChart from "./graphics/ConsumptionPieChart";
 
-export type reducedComicsType = {
-    percentage: number;
-    status: string;
-};
+export type reducedComicsType = string | number;
 
 const StatisticsContainer = () => {
     const generateDataArray = (originalList: ComicType[]) => {
         return [
-            {
-                percentage:
-                    originalList.filter(
-                        (x) => x.status === ComicStatusEnum["A ser comprado"]
-                    ).length / originalList.length,
-                status: ComicStatusEnum[0],
-            },
-            {
-                percentage:
-                    originalList.filter(
-                        (x) => x.status === ComicStatusEnum["Não Lido"]
-                    ).length / originalList.length,
-                status: ComicStatusEnum[1],
-            },
-            {
-                percentage:
-                    originalList.filter(
-                        (x) => x.status === ComicStatusEnum.Lido
-                    ).length / originalList.length,
-                status: ComicStatusEnum[2],
-            },
+            ["Group Status", "Total"],
+            [
+                ComicStatusEnum[0] as string,
+                originalList.filter(
+                    (x) => x.status === ComicStatusEnum["A ser comprado"]
+                ).length,
+            ],
+            [
+                ComicStatusEnum[1] as string,
+                originalList.filter(
+                    (x) => x.status === ComicStatusEnum["Não Lido"]
+                ).length,
+            ],
+            [
+                ComicStatusEnum[2] as string,
+                originalList.filter((x) => x.status === ComicStatusEnum.Lido)
+                    .length,
+            ],
         ];
     };
 

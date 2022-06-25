@@ -11,23 +11,19 @@ const style = {
 
 type hqContainerProps = {
     comicsList: ComicType[];
-    sagasListEnabled: boolean;
+    assetAddressGenerator: (id: number) => string;
 };
 
-const zeroPad = (num: number, places: number) =>
-    String(num).padStart(places, "0");
-
-const HQContainer = ({ comicsList, sagasListEnabled }: hqContainerProps) => {
-    const assetsTemplateString = (collectionNumber: number) =>
-        !sagasListEnabled
-            ? `dcgbr${zeroPad(collectionNumber, 3)}_br_1.webp`
-            : `dcgbr5${zeroPad(collectionNumber, 2)}_br_1.webp`;
+const HQContainer = ({
+    comicsList,
+    assetAddressGenerator,
+}: hqContainerProps) => {
     return (
         <div style={style as React.CSSProperties}>
             {comicsList.map((comic) => (
                 <HQElement
                     key={comic.collectionNumber}
-                    asset={assetsTemplateString(comic.collectionNumber)}
+                    asset={assetAddressGenerator(comic.collectionNumber)}
                     title={comic.label}
                     status={comic.status}
                     collectionNumber={comic.collectionNumber}

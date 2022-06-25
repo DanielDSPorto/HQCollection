@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "HQ-Collection",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,8 +12,8 @@
     "@types/react-dom": "^18.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-google-charts": "^4.0.0",
     "react-scripts": "5.0.1",
-    "recharts": "^2.1.10",
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4"
   },

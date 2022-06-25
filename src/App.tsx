@@ -18,6 +18,12 @@ const filtersDisabledObject: FilterType = {
     read: false,
 };
 
+type comicDictionaryEntry = {
+    listTitle: string;
+    list: ComicType[];
+    assetAddressGenerator: (id: number) => string;
+};
+
 const filteredComicList = (comicList: ComicType[], filters: FilterType) => {
     return comicList.filter(
         (x) =>
@@ -28,14 +34,31 @@ const filteredComicList = (comicList: ComicType[], filters: FilterType) => {
     );
 };
 
+const zeroPad = (num: number, places: number) =>
+    String(num).padStart(places, "0");
+
 function App() {
     const [filters, setFilters] = React.useState<FilterType>(
         filtersDisabledObject
     );
     const [graphsTabEnabled, setGraphsTabEnabled] =
         React.useState<boolean>(false);
-    const [sagasListEnabled, setSagasListEnabled] =
-        React.useState<boolean>(false);
+    const [selectedList, setSelectedList] = React.useState<number>(0);
+
+    const comicListDictionary: comicDictionaryEntry[] = [
+        {
+            listTitle: "Graphic Novels",
+            list: comicList,
+            assetAddressGenerator: (id: number) =>
+                `dcgbr${zeroPad(id, 3)}_br_1.webp`,
+        },
+        {
+            listTitle: "Sagas Definitivas",
+            list: SagasList,
+            assetAddressGenerator: (id: number) =>
+                `dcgbr5${zeroPad(id, 2)}_br_1.webp`,
+        },
+    ];
 
     return (
         <div className="App">
@@ -75,16 +98,18 @@ function App() {
                         }}>
                         Lido
                     </button>
-                    <button
-                        className="button-style"
-                        onClick={() => {
-                            setSagasListEnabled(!sagasListEnabled),
-                                setGraphsTabEnabled(false);
-                        }}>{`Lista : ${
-                        !sagasListEnabled
-                            ? "Graphic Novels"
-                            : "Sagas Definitivas"
-                    }`}</button>
+                    <select
+                        className="select-style"
+                        onChange={(evt) => {
+                            setSelectedList(Number.parseInt(evt.target.value));
+                            setGraphsTabEnabled(false);
+                        }}>
+                        {comicListDictionary.map((opt, idx) => (
+                            <option key={idx} value={idx}>
+                                {opt.listTitle}
+                            </option>
+                        ))}
+                    </select>
                     <button
                         className="button-style"
                         onClick={() => setGraphsTabEnabled(!graphsTabEnabled)}>
@@ -96,10 +121,13 @@ function App() {
                 {!graphsTabEnabled ? (
                     <HQContainer
                         comicsList={filteredComicList(
-                            sagasListEnabled ? SagasList : comicList,
+                            comicListDictionary[selectedList].list,
                             filters
                         )}
-                        sagasListEnabled={sagasListEnabled}
+                        assetAddressGenerator={
+                            comicListDictionary[selectedList]
+                                .assetAddressGenerator
+                        }
                     />
                 ) : (
                     <StatisticsContainer />
