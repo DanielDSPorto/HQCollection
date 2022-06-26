@@ -1,18 +1,23 @@
+import { ComicDictionaryEntry } from "../App";
 import { ComicStatusEnum } from "../model/ComicStatusEnum";
 import ComicType from "../model/ComicType";
-import comicList, { SagasList } from "./comicsList";
+import comicList, { SagasList, NoMansLandList } from "./comicsList";
 import ConsumptionPieChart from "./graphics/ConsumptionPieChart";
 
 export type reducedComicsType = string | number;
 
-const StatisticsContainer = () => {
+type StatisticsContainerProps = {
+    comicsDictionary : ComicDictionaryEntry[];
+};
+
+const StatisticsContainer = ({comicsDictionary} : StatisticsContainerProps) => {
     const generateDataArray = (originalList: ComicType[]) => {
         return [
             ["Group Status", "Total"],
             [
                 ComicStatusEnum[0] as string,
                 originalList.filter(
-                    (x) => x.status === ComicStatusEnum["A ser comprado"]
+                    (x) => x.status === ComicStatusEnum["A Ser Comprado"]
                 ).length,
             ],
             [
@@ -31,14 +36,7 @@ const StatisticsContainer = () => {
 
     return (
         <div className="graphs-wrapper">
-            <ConsumptionPieChart
-                dataArray={generateDataArray(comicList)}
-                title="Graphic Novels"
-            />
-            <ConsumptionPieChart
-                dataArray={generateDataArray(SagasList)}
-                title="Sagas Definitivas"
-            />
+            {comicsDictionary.map(entry => <ConsumptionPieChart dataArray={generateDataArray(entry.list)} title={entry.listTitle}/>)}
         </div>
     );
 };

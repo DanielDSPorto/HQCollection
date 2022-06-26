@@ -1,7 +1,7 @@
 import "./App.css";
 import HQContainer from "./components/HQContainer";
 import React from "react";
-import comicList, { SagasList } from "./components/comicsList";
+import ComicList, { NoMansLandList, SagasList } from "./components/comicsList";
 import { ComicStatusEnum } from "./model/ComicStatusEnum";
 import ComicType from "./model/ComicType";
 import StatisticsContainer from "./components/StatisticsContainer";
@@ -18,17 +18,17 @@ const filtersDisabledObject: FilterType = {
     read: false,
 };
 
-type comicDictionaryEntry = {
+export type ComicDictionaryEntry = {
     listTitle: string;
     list: ComicType[];
     assetAddressGenerator: (id: number) => string;
 };
 
-const filteredComicList = (comicList: ComicType[], filters: FilterType) => {
-    return comicList.filter(
+const filteredComicList = (ComicList: ComicType[], filters: FilterType) => {
+    return ComicList.filter(
         (x) =>
             (!filters.toBuy ||
-                x.status === ComicStatusEnum["A ser comprado"]) &&
+                x.status === ComicStatusEnum["A Ser Comprado"]) &&
             (!filters.unread || x.status === ComicStatusEnum["Não Lido"]) &&
             (!filters.read || x.status === ComicStatusEnum.Lido)
     );
@@ -45,10 +45,10 @@ function App() {
         React.useState<boolean>(false);
     const [selectedList, setSelectedList] = React.useState<number>(0);
 
-    const comicListDictionary: comicDictionaryEntry[] = [
+    const ComicListDictionary: ComicDictionaryEntry[] = [
         {
             listTitle: "Graphic Novels",
-            list: comicList,
+            list: ComicList,
             assetAddressGenerator: (id: number) =>
                 `dcgbr${zeroPad(id, 3)}_br_1.webp`,
         },
@@ -57,6 +57,12 @@ function App() {
             list: SagasList,
             assetAddressGenerator: (id: number) =>
                 `dcgbr5${zeroPad(id, 2)}_br_1.webp`,
+        },
+        {
+            listTitle: "Cataclismo/Terra de Ninguém",
+            list: NoMansLandList,
+            assetAddressGenerator: (id: number) =>
+                `dcgbr8${zeroPad(id, 2)}_br_1.webp`,
         },
     ];
 
@@ -74,7 +80,7 @@ function App() {
                             });
                             setGraphsTabEnabled(false);
                         }}>
-                        A ser comprado
+                        A Ser Comprado
                     </button>
                     <button
                         className="button-style"
@@ -104,7 +110,7 @@ function App() {
                             setSelectedList(Number.parseInt(evt.target.value));
                             setGraphsTabEnabled(false);
                         }}>
-                        {comicListDictionary.map((opt, idx) => (
+                        {ComicListDictionary.map((opt, idx) => (
                             <option key={idx} value={idx}>
                                 {opt.listTitle}
                             </option>
@@ -121,16 +127,16 @@ function App() {
                 {!graphsTabEnabled ? (
                     <HQContainer
                         comicsList={filteredComicList(
-                            comicListDictionary[selectedList].list,
+                            ComicListDictionary[selectedList].list,
                             filters
                         )}
                         assetAddressGenerator={
-                            comicListDictionary[selectedList]
+                            ComicListDictionary[selectedList]
                                 .assetAddressGenerator
                         }
                     />
                 ) : (
-                    <StatisticsContainer />
+                    <StatisticsContainer comicsDictionary={ComicListDictionary}/>
                 )}
             </div>
         </div>

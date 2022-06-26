@@ -1,5 +1,5 @@
 export enum ComicStatusEnum  {
-    "A ser comprado",
+    "A Ser Comprado",
     "Não Lido",
     "Lido"
 }

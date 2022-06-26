@@ -1,6 +1,6 @@
 import ComicType from "../model/ComicType";
 
-const comicList: ComicType[] = [
+const ComicList: ComicType[] = [
     { label: "Batman: Silêncio (Parte 1)", collectionNumber: 1, status: 2 },
     { label: "Batman: Silêncio (Parte 2)", collectionNumber: 2, status: 2 },
     {
@@ -218,4 +218,13 @@ export const SagasList: ComicType[] = [
     { label: "Xeque-Mate: Parte 2", collectionNumber: 13, status: 0 },
 ];
 
-export default comicList;
+export const NoMansLandList: ComicType[] = [
+    { label: "Batman: Cataclismo", collectionNumber: 1, status: 0 },
+    { label: "Batman: Terra de Ninguém Pt 1", collectionNumber: 2, status: 1 },
+    { label: "Batman: Terra de Ninguém Pt 2", collectionNumber: 3, status: 1 },
+    { label: "Batman: Terra de Ninguém Pt 3", collectionNumber: 4, status: 1 },
+    { label: "Batman: Terra de Ninguém Pt 4", collectionNumber: 5, status: 1 },
+    { label: "Batman: Terra de Ninguém Pt 5", collectionNumber: 6, status: 1 },
+];
+
+export default ComicList;
