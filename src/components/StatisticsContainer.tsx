@@ -1,7 +1,6 @@
 import { ComicDictionaryEntry } from "../App";
 import { ComicStatusEnum } from "../model/ComicStatusEnum";
 import ComicType from "../model/ComicType";
-import comicList, { SagasList, NoMansLandList } from "./comicsList";
 import ConsumptionPieChart from "./graphics/ConsumptionPieChart";
 
 export type reducedComicsType = string | number;
@@ -36,7 +35,7 @@ const StatisticsContainer = ({comicsDictionary} : StatisticsContainerProps) => {
 
     return (
         <div className="graphs-wrapper">
-            {comicsDictionary.map(entry => <ConsumptionPieChart dataArray={generateDataArray(entry.list)} title={entry.listTitle}/>)}
+            {comicsDictionary.map((entry,idx) => <ConsumptionPieChart key={`list_${idx}`} dataArray={generateDataArray(entry.list)} title={entry.listTitle}/>)}
         </div>
     );
 };

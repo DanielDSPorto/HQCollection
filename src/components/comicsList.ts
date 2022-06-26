@@ -203,7 +203,7 @@ const ComicList: ComicType[] = [
 ];
 
 export const SagasList: ComicType[] = [
-    { label: "Crise nas Infinitas Terras", collectionNumber: 1, status: 0 },
+    { label: "Crise nas Infinitas Terras", collectionNumber: 1, status: 1 },
     { label: "Crise Infinita", collectionNumber: 2, status: 1 },
     { label: "Crise Final", collectionNumber: 3, status: 1 },
     { label: "Crise de Identidade", collectionNumber: 4, status: 1 },
@@ -219,7 +219,7 @@ export const SagasList: ComicType[] = [
 ];
 
 export const NoMansLandList: ComicType[] = [
-    { label: "Batman: Cataclismo", collectionNumber: 1, status: 0 },
+    { label: "Batman: Cataclismo", collectionNumber: 1, status: 1 },
     { label: "Batman: Terra de Ninguém Pt 1", collectionNumber: 2, status: 1 },
     { label: "Batman: Terra de Ninguém Pt 2", collectionNumber: 3, status: 1 },
     { label: "Batman: Terra de Ninguém Pt 3", collectionNumber: 4, status: 1 },
