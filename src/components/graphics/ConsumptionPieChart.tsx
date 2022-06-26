@@ -3,16 +3,6 @@ import { Chart } from "react-google-charts";
 
 const COLORS = ["#fb8500", "#ffb703", "#219ebc"];
 
-const renderColorfulLegendText = (value: string, entry: any) => {
-    const { color } = entry;
-
-    return (
-        <span style={{ color }}>{`${(parseFloat(value) * 100).toFixed(
-            2
-        )}%`}</span>
-    );
-};
-
 type ConsumptionPieChartProps = {
     dataArray: reducedComicsType[][];
     title: string;

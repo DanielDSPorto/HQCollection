@@ -25,24 +25,24 @@
 }
 
 .content {
-    padding-top: 8em;
+    padding-top: 9.5em;
 }
 
 @media (min-width: 540px) {
     .content {
-        padding-top: 10em;
+        padding-top: 11.5em;
     }
 }
 
 @media (min-width: 670px) {
     .content {
-        padding-top: 11em;
+        padding-top: 12.5em;
     }
 }
 
 @media (min-width: 800px) {
     .content {
-        padding-top: 12em;
+        padding-top: 13.5em;
     }
 }
 
@@ -53,12 +53,13 @@ img.header-image {
 .button-box {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
 .button-style {
     margin-right: 1em;
-    /* margin-bottom: 1em; */
+    margin-bottom: 0.1em;
     border: 1px solid black;
     border-radius: 3px;
     padding: 0.5em;
@@ -86,7 +87,7 @@ img.header-image {
 
 @media (max-width: 540px) {
     .graphs-wrapper {
-        padding-top: 5em;
+        padding-top: 5.1em;
     }
 }
 
