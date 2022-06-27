@@ -1,7 +1,6 @@
 import { reducedComicsType } from "../StatisticsContainer";
 import { Chart } from "react-google-charts";
-
-const COLORS = ["#9e2a2b", "#e09f3e", "#335c67"];
+import { COLORS } from "../../utils/HQUtils";
 
 type ConsumptionPieChartProps = {
     dataArray: reducedComicsType[][];

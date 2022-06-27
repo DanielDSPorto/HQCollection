@@ -1,6 +1,7 @@
 import React from "react";
 import useImage from "../hooks/useImage";
 import { ComicStatusEnum } from "../model/ComicStatusEnum";
+import { COLORS } from "../utils/HQUtils";
 
 type HQElementProps = {
     asset: string;
@@ -39,13 +40,13 @@ const statusColorSelection = (status: ComicStatusEnum) => {
     let divColor: string;
     switch (status) {
         case 1:
-            divColor = "#ffee93";
+            divColor = COLORS[1];
             break;
         case 2:
-            divColor = "#a0ced9";
+            divColor = COLORS[2];
             break;
         default:
-            divColor = "#ffc09f";
+            divColor = COLORS[0];
             break;
     }
     return divColor;
