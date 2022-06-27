@@ -97,7 +97,7 @@ const ComicList: ComicType[] = [
     {
         label: "Lanterna Verde: Crepúsculo Esmeralda/Novo Amanhecer",
         collectionNumber: 30,
-        status: 0,
+        status: 1,
     },
     {
         label: "Arlequina: Prelúdios e trocadalhos",
@@ -173,7 +173,7 @@ const ComicList: ComicType[] = [
     {
         label: "Homem-Borracha: Uma caçada muito louca",
         collectionNumber: 54,
-        status: 0,
+        status: 1,
     },
     {
         label: "Liga da Justiça: Nova Ordem Mundial",
