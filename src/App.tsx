@@ -1,7 +1,11 @@
 import "./App.css";
 import HQContainer from "./components/HQContainer";
 import React from "react";
-import ComicList, { NoMansLandList, SagasList } from "./components/comicsList";
+import ComicList, {
+    GreenLanternList,
+    NoMansLandList,
+    SagasList,
+} from "./components/comicsList";
 import { ComicStatusEnum } from "./model/ComicStatusEnum";
 import ComicType from "./model/ComicType";
 import StatisticsContainer from "./components/StatisticsContainer";
@@ -63,6 +67,12 @@ function App() {
             list: NoMansLandList,
             assetAddressGenerator: (id: number) =>
                 `dcgbr8${zeroPad(id, 2)}_br_1.webp`,
+        },
+        {
+            listTitle: "Lanterna Verde, por Geoff Johns",
+            list: GreenLanternList,
+            assetAddressGenerator: (id: number) =>
+                `green_lantern_${zeroPad(id, 3)}.jpg`,
         },
     ];
 
@@ -136,7 +146,9 @@ function App() {
                         }
                     />
                 ) : (
-                    <StatisticsContainer comicsDictionary={ComicListDictionary}/>
+                    <StatisticsContainer
+                        comicsDictionary={ComicListDictionary}
+                    />
                 )}
             </div>
         </div>

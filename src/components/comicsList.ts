@@ -227,4 +227,71 @@ export const NoMansLandList: ComicType[] = [
     { label: "Batman: Terra de Ninguém Pt 5", collectionNumber: 6, status: 1 },
 ];
 
+export const GreenLanternList: ComicType[] = [
+    { label: "Lanterna Verde: Renascimento", collectionNumber: 1, status: 1 },
+    {
+        label: "Lanterna Verde: A Vingança dos Lanternas Verdes",
+        collectionNumber: 2,
+        status: 1,
+    },
+    {
+        label: "Lanterna Verde: Hal Jordan: Procurado",
+        collectionNumber: 3,
+        status: 1,
+    },
+    {
+        label: "Lanterna Verde: Tropa dos Lanternas Verdes: O Lado Negro do Verde",
+        collectionNumber: 4,
+        status: 1,
+    },
+    { label: "Lanterna Verde: Sem Medo", collectionNumber: 5, status: 0 },
+    {
+        label: "Lanterna Verde: Guerra dos Anéis pt 1",
+        collectionNumber: 6,
+        status: 0,
+    },
+    {
+        label: "Lanterna Verde: Guerra dos Anéis pt 2",
+        collectionNumber: 7,
+        status: 0,
+    },
+    {
+        label: "Lanterna Verde: A Ira dos Lanternas Vermelhos",
+        collectionNumber: 8,
+        status: 1,
+    },
+    { label: "Lanterna Verde: Agente Laranja", collectionNumber: 9, status: 0 },
+    {
+        label: "Lanterna Verde: Origem Secreta",
+        collectionNumber: 10,
+        status: 1,
+    },
+    {
+        label: "Lanterna Verde: A Noite Mais Densa",
+        collectionNumber: 11,
+        status: 0,
+    },
+    {
+        label: "Lanterna Verde: O Dia Mais Claro pt 1",
+        collectionNumber: 12,
+        status: 0,
+    },
+    {
+        label: "Lanterna Verde: O Dia Mais Claro pt 2",
+        collectionNumber: 13,
+        status: 0,
+    },
+    {
+        label: "Lanterna Verde: A Guerra dos Lanternas Verdes",
+        collectionNumber: 14,
+        status: 0,
+    },
+    {
+        label: "Lanterna Verde: A Vingança do Mão Negra",
+        collectionNumber: 15,
+        status: 0,
+    },
+    { label: "Lanterna Verde: O Fim", collectionNumber: 16, status: 0 },
+];
+
 export default ComicList;
