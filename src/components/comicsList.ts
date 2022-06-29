@@ -232,7 +232,7 @@ export const GreenLanternList: ComicType[] = [
     {
         label: "Lanterna Verde: A Vingança dos Lanternas Verdes",
         collectionNumber: 2,
-        status: 1,
+        status: 0,
     },
     {
         label: "Lanterna Verde: Hal Jordan: Procurado",
@@ -260,7 +260,7 @@ export const GreenLanternList: ComicType[] = [
         collectionNumber: 8,
         status: 1,
     },
-    { label: "Lanterna Verde: Agente Laranja", collectionNumber: 9, status: 0 },
+    { label: "Lanterna Verde: Agente Laranja", collectionNumber: 9, status: 1 },
     {
         label: "Lanterna Verde: Origem Secreta",
         collectionNumber: 10,
