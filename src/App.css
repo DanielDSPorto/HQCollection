@@ -95,3 +95,10 @@ img.header-image {
     width: 400px;
     height: 400px;
 }
+
+img {
+    max-height: 230px;
+    max-width: 150px;
+    height: auto;
+    width: auto;
+}

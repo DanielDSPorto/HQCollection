@@ -3,6 +3,7 @@ import HQContainer from "./components/HQContainer";
 import React from "react";
 import ComicList, {
     GreenLanternList,
+    IndividualVolumesList,
     NoMansLandList,
     SagasList,
 } from "./components/comicsList";
@@ -73,6 +74,12 @@ function App() {
             list: GreenLanternList,
             assetAddressGenerator: (id: number) =>
                 `green_lantern_${zeroPad(id, 3)}.jpg`,
+        },
+        {
+            listTitle: "Outros Volumes",
+            list: IndividualVolumesList,
+            assetAddressGenerator: (id: number) =>
+                `individual_volumes_${zeroPad(id, 3)}.jpg`,
         },
     ];
 

@@ -294,4 +294,22 @@ export const GreenLanternList: ComicType[] = [
     { label: "Lanterna Verde: O Fim", collectionNumber: 16, status: 0 },
 ];
 
+export const IndividualVolumesList: ComicType[] = [
+    { label: "Batman e Filho", collectionNumber: 1, status: 1 },
+    { label: "Batman: Ano Um", collectionNumber: 2, status: 1 },
+    { label: "Batman: Cavaleiro das Trevas", collectionNumber: 3, status: 1 },
+    {
+        label: "Superman: O que aconteceu ao Homem de Aço?",
+        collectionNumber: 4,
+        status: 1,
+    },
+    { label: "All-Star Superman", collectionNumber: 5, status: 1 },
+    { label: "Batman: A Piada Mortal", collectionNumber: 6, status: 2 },
+    { label: "Batman: Terra Um pt 1", collectionNumber: 7, status: 1 },
+    { label: "Batman: Terra Um pt 2", collectionNumber: 8, status: 1 },
+    { label: "Superman: Terra Um pt 1", collectionNumber: 10, status: 1 },
+    { label: "Superman: Terra Um pt 2", collectionNumber: 11, status: 1 },
+    { label: "Injustice: Ano Três", collectionNumber: 15, status: 1 },
+];
+
 export default ComicList;

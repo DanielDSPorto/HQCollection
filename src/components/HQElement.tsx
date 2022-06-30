@@ -68,7 +68,7 @@ const HQElement = ({
                 {!error && loading ? (
                     <b>loading_image</b>
                 ) : (
-                    <img src={image} alt={`img_${title}`} width={"150px"} />
+                    <img src={image} alt={`img_${title}`} />
                 )}
                 <div style={infoDivStyle as React.CSSProperties}>
                     <b>{title}</b>
