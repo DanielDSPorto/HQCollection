@@ -73,7 +73,7 @@ const ComicList: ComicType[] = [
         status: 1,
     },
     { label: "Superman: A Morte do Superman", collectionNumber: 24, status: 1 },
-    { label: "Lobo: Sem Limites", collectionNumber: 25, status: 0 },
+    { label: "Lobo: Sem Limites", collectionNumber: 25, status: 1 },
     {
         label: "Mulher-Maravilha: Paraíso Perdido",
         collectionNumber: 26,
@@ -168,7 +168,7 @@ const ComicList: ComicType[] = [
     {
         label: "O Bravo e o Audaz: Os donos da sorte",
         collectionNumber: 53,
-        status: 0,
+        status: 1,
     },
     {
         label: "Homem-Borracha: Uma caçada muito louca",
@@ -178,18 +178,18 @@ const ComicList: ComicType[] = [
     {
         label: "Liga da Justiça: Nova Ordem Mundial",
         collectionNumber: 55,
-        status: 0,
+        status: 1,
     },
-    { label: "Flash: Guerra de Gangues", collectionNumber: 56, status: 0 },
+    { label: "Flash: Guerra de Gangues", collectionNumber: 56, status: 1 },
     {
         label: "Superman: O Legado das Estrelas (Parte 1)",
         collectionNumber: 57,
-        status: 0,
+        status: 1,
     },
     {
         label: "Superman: O Legado das Estrelas (Parte 2)",
         collectionNumber: 58,
-        status: 0,
+        status: 1,
     },
     {
         label: "Lanterna Verde/Arqueiro Verde: Na estrada",
@@ -199,7 +199,18 @@ const ComicList: ComicType[] = [
     { label: "Flash: Ponto de Ignição", collectionNumber: 60, status: 2 },
     { label: "Reino do Amanhã - Parte 1", collectionNumber: 88, status: 2 },
     { label: "Reino do Amanhã - Parte 2", collectionNumber: 89, status: 2 },
-    { label: "Flash: Velocidade Terminal", collectionNumber: 94, status: 1 },
+    {
+        label: "Arqueiro Verde: Lua de Caçador",
+        collectionNumber: 93,
+        status: 1,
+    },
+    {
+        label: "Flash: Velocidade Terminal",
+        collectionNumber: 94,
+        status: 2,
+        completionDate:
+            "Sat Jul 02 2022 19:06:19 GMT-0300 (Horário Padrão de Brasília)",
+    },
 ];
 
 export const SagasList: ComicType[] = [
@@ -310,6 +321,13 @@ export const IndividualVolumesList: ComicType[] = [
     { label: "Superman: Terra Um pt 1", collectionNumber: 10, status: 1 },
     { label: "Superman: Terra Um pt 2", collectionNumber: 11, status: 1 },
     { label: "Injustice: Ano Três", collectionNumber: 15, status: 1 },
+    {
+        label: "Batman: Cavaleiro das Trevas - A Última Cruzada",
+        collectionNumber: 18,
+        status: 1,
+    },
+    { label: "A Morte do Superman: pt 1", collectionNumber: 19, status: 1 },
+    { label: "A Morte do Superman: pt 2", collectionNumber: 20, status: 1 },
 ];
 
 export default ComicList;
