@@ -240,31 +240,31 @@ export const NoMansLandList: ComicType[] = [
 
 export const GreenLanternList: ComicType[] = [
     { label: "Lanterna Verde: Renascimento", collectionNumber: 1, status: 1 },
+    { label: "Lanterna Verde: Sem Medo", collectionNumber: 2, status: 1 },
     {
         label: "Lanterna Verde: A Vingança dos Lanternas Verdes",
-        collectionNumber: 2,
-        status: 0,
-    },
-    {
-        label: "Lanterna Verde: Hal Jordan: Procurado",
         collectionNumber: 3,
         status: 1,
     },
     {
-        label: "Lanterna Verde: Tropa dos Lanternas Verdes: O Lado Negro do Verde",
+        label: "Lanterna Verde: Hal Jordan: Procurado",
         collectionNumber: 4,
         status: 1,
     },
-    { label: "Lanterna Verde: Sem Medo", collectionNumber: 5, status: 0 },
+    {
+        label: "Lanterna Verde: Tropa dos Lanternas Verdes: O Lado Negro do Verde",
+        collectionNumber: 5,
+        status: 1,
+    },
     {
         label: "Lanterna Verde: Guerra dos Anéis pt 1",
         collectionNumber: 6,
-        status: 0,
+        status: 1,
     },
     {
         label: "Lanterna Verde: Guerra dos Anéis pt 2",
         collectionNumber: 7,
-        status: 0,
+        status: 1,
     },
     {
         label: "Lanterna Verde: A Ira dos Lanternas Vermelhos",
@@ -312,7 +312,9 @@ export const IndividualVolumesList: ComicType[] = [
     {
         label: "Superman: O que aconteceu ao Homem de Aço?",
         collectionNumber: 4,
-        status: 1,
+        status: 2,
+        completionDate:
+            "Tue Jul 05 2022 10:51:58 GMT-0300 (Horário Padrão de Brasília)",
     },
     { label: "All-Star Superman", collectionNumber: 5, status: 1 },
     { label: "Batman: A Piada Mortal", collectionNumber: 6, status: 2 },
