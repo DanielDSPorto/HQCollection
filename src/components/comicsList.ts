@@ -320,9 +320,15 @@ export const IndividualVolumesList: ComicType[] = [
     { label: "Batman: A Piada Mortal", collectionNumber: 6, status: 2 },
     { label: "Batman: Terra Um pt 1", collectionNumber: 7, status: 1 },
     { label: "Batman: Terra Um pt 2", collectionNumber: 8, status: 1 },
+    { label: "Batman: Terra Um pt 3", collectionNumber: 9, status: 0 },
     { label: "Superman: Terra Um pt 1", collectionNumber: 10, status: 1 },
     { label: "Superman: Terra Um pt 2", collectionNumber: 11, status: 1 },
+    { label: "Superman: Terra Um pt 3", collectionNumber: 12, status: 0 },
+    { label: "Injustice: Ano Um", collectionNumber: 13, status: 0 },
+    { label: "Injustice: Ano Dois", collectionNumber: 14, status: 0 },
     { label: "Injustice: Ano Três", collectionNumber: 15, status: 1 },
+    { label: "Injustice: Ano Quatro", collectionNumber: 16, status: 0 },
+    { label: "Injustice: Ano Cinco", collectionNumber: 17, status: 0 },
     {
         label: "Batman: Cavaleiro das Trevas - A Última Cruzada",
         collectionNumber: 18,
@@ -330,6 +336,11 @@ export const IndividualVolumesList: ComicType[] = [
     },
     { label: "A Morte do Superman: pt 1", collectionNumber: 19, status: 1 },
     { label: "A Morte do Superman: pt 2", collectionNumber: 20, status: 1 },
+    {
+        label: "Superman: Entre a Foice e o Martelo",
+        collectionNumber: 21,
+        status: 2,
+    },
 ];
 
 export default ComicList;
