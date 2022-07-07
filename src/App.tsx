@@ -4,6 +4,7 @@ import React from "react";
 import ComicList, {
     GreenLanternList,
     IndividualVolumesList,
+    MarvelIndividualVolumesList,
     NoMansLandList,
     SagasList,
 } from "./components/comicsList";
@@ -76,10 +77,16 @@ function App() {
                 `green_lantern_${zeroPad(id, 3)}.jpg`,
         },
         {
-            listTitle: "Outros Volumes",
+            listTitle: "Outros Volumes - DC",
             list: IndividualVolumesList,
             assetAddressGenerator: (id: number) =>
                 `individual_volumes_${zeroPad(id, 3)}.jpg`,
+        },
+        {
+            listTitle: "Outros Volumes - Marvel",
+            list: MarvelIndividualVolumesList,
+            assetAddressGenerator: (id: number) =>
+                `marvel_individual_volumes_${zeroPad(id, 3)}.jpg`,
         },
     ];
 
