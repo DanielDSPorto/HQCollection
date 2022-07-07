@@ -102,3 +102,24 @@ img {
     height: auto;
     width: auto;
 }
+
+.confused_flash {
+    width: 360px;
+    height: 187px;
+    position: relative;
+    text-align: center;
+}
+
+.confused_flash > img {
+    height: auto;
+    max-width: 100%;
+    opacity: 0.6;
+}
+
+.confused_flash > b {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}

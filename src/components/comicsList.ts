@@ -280,29 +280,29 @@ export const GreenLanternList: ComicType[] = [
     {
         label: "Lanterna Verde: A Noite Mais Densa",
         collectionNumber: 11,
-        status: 0,
+        status: 1,
     },
     {
         label: "Lanterna Verde: O Dia Mais Claro pt 1",
         collectionNumber: 12,
-        status: 0,
+        status: 1,
     },
     {
         label: "Lanterna Verde: O Dia Mais Claro pt 2",
         collectionNumber: 13,
-        status: 0,
+        status: 1,
     },
     {
         label: "Lanterna Verde: A Guerra dos Lanternas Verdes",
         collectionNumber: 14,
-        status: 0,
+        status: 1,
     },
     {
         label: "Lanterna Verde: A Vingança do Mão Negra",
         collectionNumber: 15,
-        status: 0,
+        status: 1,
     },
-    { label: "Lanterna Verde: O Fim", collectionNumber: 16, status: 0 },
+    { label: "Lanterna Verde: O Fim", collectionNumber: 16, status: 1 },
 ];
 
 export const IndividualVolumesList: ComicType[] = [

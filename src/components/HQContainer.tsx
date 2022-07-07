@@ -1,5 +1,6 @@
 import React from "react";
 import ComicType from "../model/ComicType";
+import ConfusedFlash from "./ConfusedFlash";
 import HQElement from "./HQElement";
 
 const style = {
@@ -21,15 +22,19 @@ const HQContainer = ({
 }: hqContainerProps) => {
     return (
         <div style={style as React.CSSProperties}>
-            {comicsList.map((comic) => (
-                <HQElement
-                    key={comic.collectionNumber}
-                    asset={assetAddressGenerator(comic.collectionNumber)}
-                    title={comic.label}
-                    status={comic.status}
-                    collectionNumber={comic.collectionNumber}
-                />
-            ))}
+            {comicsList.length ? (
+                comicsList.map((comic) => (
+                    <HQElement
+                        key={comic.collectionNumber}
+                        asset={assetAddressGenerator(comic.collectionNumber)}
+                        title={comic.label}
+                        status={comic.status}
+                        collectionNumber={comic.collectionNumber}
+                    />
+                ))
+            ) : (
+                <ConfusedFlash />
+            )}
         </div>
     );
 };
