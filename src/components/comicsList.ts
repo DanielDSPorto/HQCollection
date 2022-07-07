@@ -343,4 +343,22 @@ export const IndividualVolumesList: ComicType[] = [
     },
 ];
 
+export const MarvelIndividualVolumesList: ComicType[] = [
+    { label: "X-Men: Fenix Negra", collectionNumber: 1, status: 1 },
+    { label: "Hulk: Planeta Hulk", collectionNumber: 2, status: 1 },
+    {
+        label: "Homem-Aranha: De Volta ao Lar",
+        collectionNumber: 3,
+        status: 1,
+    },
+    { label: "Demolidor: A Queda de Murdock", collectionNumber: 4, status: 1 },
+    {
+        label: "Homem-Aranha: A Última Caçada de Kraven",
+        collectionNumber: 5,
+        status: 1,
+    },
+    { label: "Guerras Secretas - pt 1", collectionNumber: 6, status: 1 },
+    { label: "Guerras Secretas - pt 2", collectionNumber: 7, status: 1 },
+];
+
 export default ComicList;
