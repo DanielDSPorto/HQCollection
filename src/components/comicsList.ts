@@ -341,6 +341,16 @@ export const IndividualVolumesList: ComicType[] = [
         collectionNumber: 21,
         status: 2,
     },
+    {
+        label: "Odisséia Cósmica",
+        collectionNumber: 22,
+        status: 1,
+    },
+    {
+        label: "Batman: Filho do Demônio",
+        collectionNumber: 23,
+        status: 1,
+    },
 ];
 
 export const MarvelIndividualVolumesList: ComicType[] = [
@@ -359,6 +369,8 @@ export const MarvelIndividualVolumesList: ComicType[] = [
     },
     { label: "Guerras Secretas - pt 1", collectionNumber: 6, status: 1 },
     { label: "Guerras Secretas - pt 2", collectionNumber: 7, status: 1 },
+    { label: "Guerra Civil", collectionNumber: 8, status: 1 },
+    { label: "Dinastia M", collectionNumber: 9, status: 0 },
 ];
 
 export default ComicList;
