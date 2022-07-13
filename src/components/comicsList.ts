@@ -351,6 +351,26 @@ export const IndividualVolumesList: ComicType[] = [
         collectionNumber: 23,
         status: 1,
     },
+    {
+        label: "Batman: Veneno",
+        collectionNumber: 24,
+        status: 1,
+    },
+    {
+        label: "Batman: A Queda do Morcego pt 1",
+        collectionNumber: 25,
+        status: 2,
+    },
+    {
+        label: "Batman: A Queda do Morcego pt 2",
+        collectionNumber: 26,
+        status: 2,
+    },
+    {
+        label: "Batman: A Queda do Morcego pt 3",
+        collectionNumber: 27,
+        status: 2,
+    },
 ];
 
 export const MarvelIndividualVolumesList: ComicType[] = [
@@ -370,7 +390,18 @@ export const MarvelIndividualVolumesList: ComicType[] = [
     { label: "Guerras Secretas - pt 1", collectionNumber: 6, status: 1 },
     { label: "Guerras Secretas - pt 2", collectionNumber: 7, status: 1 },
     { label: "Guerra Civil", collectionNumber: 8, status: 1 },
-    { label: "Dinastia M", collectionNumber: 9, status: 0 },
+    { label: "Dinastia M", collectionNumber: 9, status: 1 },
+    { label: "X-Men: Complexo de Messias", collectionNumber: 10, status: 1 },
+    {
+        label: "X-Men: Operação Tolerância Zero",
+        collectionNumber: 11,
+        status: 1,
+    },
+    {
+        label: "Homem-Aranha por Todd McFarlane - Omnibus",
+        collectionNumber: 12,
+        status: 1,
+    },
 ];
 
 export default ComicList;

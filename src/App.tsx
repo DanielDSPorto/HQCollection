@@ -93,7 +93,7 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <h1>HQ Collection</h1>
+                <h1>Comic Book Collection</h1>
                 <div className="button-box">
                     <button
                         className="button-style"
