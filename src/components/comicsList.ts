@@ -214,7 +214,7 @@ const ComicList: ComicType[] = [
 ];
 
 export const SagasList: ComicType[] = [
-    { label: "Crise nas Infinitas Terras", collectionNumber: 1, status: 1 },
+    { label: "Crise nas Infinitas Terras", collectionNumber: 1, status: 2 },
     { label: "Crise Infinita", collectionNumber: 2, status: 1 },
     { label: "Crise Final", collectionNumber: 3, status: 1 },
     { label: "Crise de Identidade", collectionNumber: 4, status: 1 },
@@ -370,6 +370,11 @@ export const IndividualVolumesList: ComicType[] = [
         label: "Batman: A Queda do Morcego pt 3",
         collectionNumber: 27,
         status: 2,
+    },
+    {
+        label: "JSA Volume Um, por Geoff Johns - Omnibus",
+        collectionNumber: 28,
+        status: 1,
     },
 ];
 
