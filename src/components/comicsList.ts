@@ -214,7 +214,13 @@ const ComicList: ComicType[] = [
 ];
 
 export const SagasList: ComicType[] = [
-    { label: "Crise nas Infinitas Terras", collectionNumber: 1, status: 2 },
+    {
+        label: "Crise nas Infinitas Terras",
+        collectionNumber: 1,
+        status: 2,
+        completionDate:
+            "Sat Jul 16 2022 17:15:54 GMT-0300 (Horário Padrão de Brasília)",
+    },
     { label: "Crise Infinita", collectionNumber: 2, status: 1 },
     { label: "Crise Final", collectionNumber: 3, status: 1 },
     { label: "Crise de Identidade", collectionNumber: 4, status: 1 },
