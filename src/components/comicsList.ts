@@ -360,7 +360,9 @@ export const IndividualVolumesList: ComicType[] = [
     {
         label: "Batman: Veneno",
         collectionNumber: 24,
-        status: 1,
+        status: 2,
+        completionDate:
+            "Sun Jul 17 2022 21:15:54 GMT-0300 (Horário Padrão de Brasília)"
     },
     {
         label: "Batman: A Queda do Morcego pt 1",
