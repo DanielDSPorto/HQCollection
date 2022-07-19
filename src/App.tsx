@@ -6,6 +6,7 @@ import ComicList, {
     IndividualVolumesList,
     MarvelIndividualVolumesList,
     NoMansLandList,
+    OtherPublishersList,
     SagasList,
 } from "./components/comicsList";
 import { ComicStatusEnum } from "./model/ComicStatusEnum";
@@ -87,6 +88,12 @@ function App() {
             list: MarvelIndividualVolumesList,
             assetAddressGenerator: (id: number) =>
                 `marvel_individual_volumes_${zeroPad(id, 3)}.jpg`,
+        },
+        {
+            listTitle: "Outras Editoras",
+            list: OtherPublishersList,
+            assetAddressGenerator: (id: number) =>
+                `other_publishers_${zeroPad(id, 3)}.jpg`,
         },
     ];
 

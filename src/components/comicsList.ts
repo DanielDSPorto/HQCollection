@@ -362,7 +362,7 @@ export const IndividualVolumesList: ComicType[] = [
         collectionNumber: 24,
         status: 2,
         completionDate:
-            "Sun Jul 17 2022 21:15:54 GMT-0300 (Horário Padrão de Brasília)"
+            "Sun Jul 17 2022 21:15:54 GMT-0300 (Horário Padrão de Brasília)",
     },
     {
         label: "Batman: A Queda do Morcego pt 1",
@@ -415,6 +415,11 @@ export const MarvelIndividualVolumesList: ComicType[] = [
         collectionNumber: 12,
         status: 1,
     },
+];
+
+export const OtherPublishersList: ComicType[] = [
+    { label: "Maus", collectionNumber: 1, status: 1 },
+    { label: "Avatar - A Promessa", collectionNumber: 2, status: 2 },
 ];
 
 export default ComicList;
