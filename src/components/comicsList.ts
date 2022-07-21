@@ -411,15 +411,26 @@ export const MarvelIndividualVolumesList: ComicType[] = [
         status: 1,
     },
     {
-        label: "Homem-Aranha por Todd McFarlane - Omnibus",
+        label: "X-Men: Gênese Mutante 2.0",
         collectionNumber: 12,
+        status: 1,
+    },
+    {
+        label: "Homem-Aranha por Todd McFarlane - Omnibus",
+        collectionNumber: 13,
         status: 1,
     },
 ];
 
 export const OtherPublishersList: ComicType[] = [
     { label: "Maus", collectionNumber: 1, status: 1 },
-    { label: "Avatar - A Promessa", collectionNumber: 2, status: 2 },
+    {
+        label: "Avatar - A Promessa",
+        collectionNumber: 2,
+        status: 2,
+        completionDate:
+            "Tue Jul 19 2022 12:47:39 GMT-0300 (Horário Padrão de Brasília)",
+    },
 ];
 
 export default ComicList;
