@@ -365,23 +365,33 @@ export const IndividualVolumesList: ComicType[] = [
             "Sun Jul 17 2022 21:15:54 GMT-0300 (Horário Padrão de Brasília)",
     },
     {
-        label: "Batman: A Queda do Morcego pt 1",
+        label: "Batman: A Queda do Morcego - Prólogo",
         collectionNumber: 25,
-        status: 2,
+        status: 1,
     },
     {
-        label: "Batman: A Queda do Morcego pt 2",
+        label: "Batman: A Queda do Morcego pt 1",
         collectionNumber: 26,
         status: 2,
     },
     {
-        label: "Batman: A Queda do Morcego pt 3",
+        label: "Batman: A Queda do Morcego pt 2",
         collectionNumber: 27,
         status: 2,
     },
     {
-        label: "JSA Volume Um, por Geoff Johns - Omnibus",
+        label: "Batman: A Queda do Morcego pt 3",
         collectionNumber: 28,
+        status: 2,
+    },
+    {
+        label: "JSA Volume Um, por Geoff Johns - Omnibus",
+        collectionNumber: 29,
+        status: 1,
+    },
+    {
+        label: "Watchmen",
+        collectionNumber: 30,
         status: 1,
     },
 ];
