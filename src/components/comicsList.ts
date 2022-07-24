@@ -412,7 +412,8 @@ export const MarvelIndividualVolumesList: ComicType[] = [
     },
     { label: "Guerras Secretas - pt 1", collectionNumber: 6, status: 1 },
     { label: "Guerras Secretas - pt 2", collectionNumber: 7, status: 1 },
-    { label: "Guerra Civil", collectionNumber: 8, status: 1 },
+    { label: "Guerra Civil", collectionNumber: 8, status: 2, 
+completionDate: 'Thu Jul 21 2022 15:03:39 GMT-0300 (-03)'},
     { label: "Dinastia M", collectionNumber: 9, status: 1 },
     { label: "X-Men: Complexo de Messias", collectionNumber: 10, status: 1 },
     {
